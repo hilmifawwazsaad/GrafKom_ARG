@@ -4,9 +4,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.5/dist/mindar-image-aframe.prod.js"></script>
+    <style>
+        .back-button {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            background-color: #FF5A5F;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .back-button:hover {
+            background-color: #F6657E;
+        }
+    </style>
 </head>
 
 <body>
+    <button id="backButton" class="back-button">Back</button>
     <a-scene
         mindar-image="imageTargetSrc: ./uranus.mind;"
         color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false"
@@ -26,6 +49,11 @@
                 animation="property: position; to: 0 0.1 0.1; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate">
         </a-entity>
     </a-scene>
+    <script>
+        document.querySelector("#backButton").addEventListener('click', () => {
+            window.location.href = "https://arg-grafkom.vercel.app/";
+        });
+    </script>
 </body>
 
 </html>
