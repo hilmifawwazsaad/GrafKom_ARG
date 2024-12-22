@@ -88,7 +88,7 @@
 
 <body>
     <div class="example-container">
-        <button id="backButton" class="back-button">Back</button>
+        <!-- <button id="backButton" class="back-button">Back</button> -->
         <div class="options-panel">
             <img id="merkurius" src="./assets/merkurius.png" />
             <img id="venus" src="./assets/venus.png" />
@@ -125,13 +125,12 @@
             </a-entity>
             <a-entity mindar-face-target="anchorIndex: 10">
                 <a-gltf-model rotation="0 0 0" position="-0.48 0.5 0" scale="0.5 0.5 0.5" src="#textModel"
-                    class="text-entity" visible="true"
-                "></a-gltf-model>
+                    class="text-entity" visible="true" "></a-gltf-model>
             </a-entity>
-            <a-entity mindar-face-target="anchorIndex: 10">
-                <a-gltf-model rotation="0 0 0" position="-0.6 -1 0" scale="0.1 0.1 0.1" src="#merkuriusModel"
-                    class="merkurius-entity" visible="true"
-                    animation="property: rotation; to: 0 360 0; loop: true; dur: 5000"></a-gltf-model>
+            <a-entity mindar-face-target=" anchorIndex: 10">
+                    <a-gltf-model rotation="0 0 0" position="-0.6 -1 0" scale="0.1 0.1 0.1" src="#merkuriusModel"
+                        class="merkurius-entity" visible="true"
+                        animation="property: rotation; to: 0 360 0; loop: true; dur: 5000"></a-gltf-model>
             </a-entity>
             <a-entity mindar-face-target="anchorIndex: 10">
                 <a-gltf-model rotation="0 0 0" position="-0.8 -0.6 0" scale="0.11 0.11 0.11" src="#venusModel"
