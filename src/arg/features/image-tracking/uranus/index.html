@@ -51,7 +51,11 @@
     </a-scene>
     <script>
         document.querySelector("#backButton").addEventListener('click', () => {
-            window.location.href = "https://arg-grafkom.vercel.app/";
+            if (window.opener) {
+                window.close();
+            } else {
+                window.location.href = "https://arg-grafkom.vercel.app/tracking";
+            }
         });
     </script>
 </body>
